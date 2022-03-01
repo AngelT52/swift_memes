@@ -8,11 +8,9 @@
 class Meme{
     let name: String
     let url: String
-    let width: Int
     
-    init(name: String, url: String, width: Int){
+    init(name: String, url: String){
         self.name = name
         self.url = url
-        self.width = width
     }
 }
