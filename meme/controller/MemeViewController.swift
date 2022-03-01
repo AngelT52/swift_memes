@@ -1,10 +1,3 @@
-//
-//  BeerViewController.swift
-//  ApiPractice
-//
-//  Created by jficerai on 25/02/2021.
-//
-
 import UIKit
 import Alamofire
 import SwiftyJSON

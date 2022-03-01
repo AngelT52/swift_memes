@@ -1,10 +1,3 @@
-//
-//  BeerDescriptionViewController.swift
-//  ApiPractice
-//
-//  Created by jficerai on 25/02/2021.
-//
-
 import UIKit
 import WebKit
 
@@ -23,11 +16,9 @@ class MemeDescriptionViewController: UIViewController {
         title = meme?.name
         if let memeUrl = meme?.url {
             self.setImage(from: memeUrl)
-        } else {
-            self.setImage(from: "https://i.imgflip.com/1g8my4.jpg")
         }
         
-        //TODO: afficher toutes les infos d'une biere
+        //TODO: afficher toutes les infos d'un meme
         
     }
     
