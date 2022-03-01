@@ -24,10 +24,11 @@ class MemeApi {
                 print("api", memesJSON)
                 for meme in memesJSON {
                     memes.append(Meme(name: meme["name"].stringValue,
-                                           url: meme["url"].stringValue
+                                           url: meme["url"].stringValue,
+                                      width: meme["width"].intValue
                     ))
                 }
-                print(memes)
+                print("memes")
                 seal.fulfill(memes)
             }
         }

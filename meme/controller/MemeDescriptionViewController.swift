@@ -11,7 +11,7 @@ import WebKit
 class MemeDescriptionViewController: UIViewController {
     
     
-    @IBOutlet weak var pictureImageView: UIImageView!
+    @IBOutlet weak var pictureImageView: UIImageView?
     
     var meme: Meme? = nil
     
@@ -20,9 +20,11 @@ class MemeDescriptionViewController: UIViewController {
 
         super.viewDidLoad()
         
-        print(meme)
+        print("oui", meme?.width)
         if let memeUrl = meme?.url {
             self.setImage(from: memeUrl)
+        } else {
+            self.setImage(from: "https://i.imgflip.com/1g8my4.jpg")
         }
         
         //TODO: afficher toutes les infos d'une biere
@@ -37,8 +39,10 @@ class MemeDescriptionViewController: UIViewController {
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
 
             let image = UIImage(data: imageData)
+            print("tocar", imageData)
             DispatchQueue.main.async {
-                self.pictureImageView.image = image
+                self.pictureImageView?.image = image
+                print("tocar", image)
             }
         }
     }

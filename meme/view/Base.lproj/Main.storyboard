@@ -83,7 +83,7 @@
             </objects>
             <point key="canvasLocation" x="1471" y="127"/>
         </scene>
-        <!--Meme Description View Controller-->
+        <!--Title-->
         <scene sceneID="2hc-6O-CVd">
             <objects>
                 <viewController id="GUM-cT-skz" customClass="MemeDescriptionViewController" customModule="meme" customModuleProvider="target" sceneMemberID="viewController">
@@ -91,10 +91,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wX8-Bp-XIs" customClass="pictureImageView">
-                                <rect key="frame" x="16" y="16" width="382" height="200"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wX8-Bp-XIs">
+                                <rect key="frame" x="16" y="50" width="382" height="500"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="mV9-3l-42A"/>
+                                    <constraint firstAttribute="height" constant="500" id="mV9-3l-42A"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -103,13 +103,17 @@
                         <constraints>
                             <constraint firstItem="0jE-bj-Cxo" firstAttribute="trailing" secondItem="wX8-Bp-XIs" secondAttribute="trailing" constant="16" id="85r-Yn-sXM"/>
                             <constraint firstItem="wX8-Bp-XIs" firstAttribute="leading" secondItem="0jE-bj-Cxo" secondAttribute="leading" constant="16" id="buO-tQ-8bK"/>
-                            <constraint firstItem="wX8-Bp-XIs" firstAttribute="top" secondItem="0jE-bj-Cxo" secondAttribute="top" constant="16" id="kbY-Rn-oao"/>
+                            <constraint firstItem="wX8-Bp-XIs" firstAttribute="top" secondItem="0jE-bj-Cxo" secondAttribute="top" constant="50" id="kbY-Rn-oao"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="5kZ-eC-JSZ"/>
+                    <connections>
+                        <outlet property="pictureImageView" destination="wX8-Bp-XIs" id="NiX-F9-i69"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXr-YX-DQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2222" y="127"/>
+            <point key="canvasLocation" x="2221.739130434783" y="126.5625"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ROf-jt-ZFH">
