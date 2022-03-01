@@ -60,16 +60,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCell" id="2ZU-Cn-n8o">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="memeCell" id="2ZU-Cn-n8o">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="2ZU-Cn-n8o" id="Awz-xX-YsX">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="384.5" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="GUM-cT-skz" kind="showDetail" identifier="memeDescriptionSegue" id="4fh-OC-nRu"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -78,6 +75,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Memes List" id="UwY-GF-bTe"/>
+                    <connections>
+                        <segue destination="GUM-cT-skz" kind="show" identifier="memeDescriptionSegue" id="T8J-Na-ixj"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtj-ij-x1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,8 +92,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wX8-Bp-XIs">
-                                <rect key="frame" x="16" y="50" width="382" height="500"/>
+                                <rect key="frame" x="16" y="106" width="382" height="500"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="wX8-Bp-XIs" secondAttribute="height" multiplier="191:250" id="VUy-qJ-IPT"/>
                                     <constraint firstAttribute="height" constant="500" id="mV9-3l-42A"/>
                                 </constraints>
                             </imageView>

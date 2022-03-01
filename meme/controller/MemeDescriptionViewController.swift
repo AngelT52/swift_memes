@@ -20,7 +20,7 @@ class MemeDescriptionViewController: UIViewController {
 
         super.viewDidLoad()
         
-        print("oui", meme?.width)
+        title = meme?.name
         if let memeUrl = meme?.url {
             self.setImage(from: memeUrl)
         } else {
@@ -35,7 +35,7 @@ class MemeDescriptionViewController: UIViewController {
         guard let imageURL = URL(string: url) else { return }
 
             // just not to cause a deadlock in UI!
-        DispatchQueue.global().async {
+        DispatchQueue.main.async {
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
 
             let image = UIImage(data: imageData)
