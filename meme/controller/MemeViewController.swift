@@ -27,7 +27,6 @@ class MemeViewController: UITableViewController {
         MemeApi.getMemes().done { memes in
             self.memes = memes
             self.tableView.reloadData()
-            print(memes)
         }
         
         
@@ -59,21 +58,21 @@ class MemeViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueToBeerDescription", sender: self.memes[indexPath.row])
+        performSegue(withIdentifier: "memeDescriptionSegue", sender: self.memes[indexPath.row])
     }
     
     
     //MARK: - Segue
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueToBeerDescription" {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "memeDescriptionSegue" {
            //TODO: envoyer la biere selectionné à l'écran de detail
             let meme = sender as?Meme
-            if let ViewControllerDestination = segue.destination as? BeerDescriptionViewController{
-                ViewControllerDestination.beer = beer
+            if let ViewControllerDestination = segue.destination as? MemeDescriptionViewController{
+                ViewControllerDestination.meme = meme
             }
             
         }
-    }*/
+    }
     
     
 }

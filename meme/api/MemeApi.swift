@@ -19,7 +19,9 @@ class MemeApi {
             AF.request("https://api.imgflip.com/get_memes").response { response in
                 let json = JSON(response.data)
                 
-                let memesJSON = json.arrayValue
+                
+                let memesJSON = json["data"]["memes"].arrayValue
+                print("api", memesJSON)
                 for meme in memesJSON {
                     memes.append(Meme(name: meme["name"].stringValue,
                                            url: meme["url"].stringValue
