@@ -17,10 +17,12 @@ class randomMemeViewController: UIViewController {
     //MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        getRandomMeme()
         //TODO: ApiCall pour recevoir le tableau de meme
         MemeApi.getMemes().done { memes in
             self.memes = memes
+            print("nm1", memes)
+            self.getRandomMeme()
+            self.randomize()
         }
         
         // ---- BLOC A SUPPRIMER ----
@@ -41,24 +43,29 @@ class randomMemeViewController: UIViewController {
     //MARK: Functions
     
     func randomize() {
-        
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { (Timer) in
-                if self.secondsRemaining > 0 {
-                   //TODO: display beer
-                    self.meme = self.getRandomMeme()
-                    if let memeUrl =  self.meme?.url{
-                        self.setImage(from: memeUrl)
-                    }
-                } else {
-                    Timer.invalidate()
-                }
-            }
+        //TODO: display beer
+         self.meme = self.getRandomMeme()
+         if let memeUrl =  self.meme?.url{
+             self.setImage(from: memeUrl)
+             self.titleLabel.text = self.meme?.name
+             
+         } else {
+             print("tocar")
+         }
+                
+            
     }
     
     
     func getRandomMeme() -> Meme {
-        
+        let m = memes.randomElement()
+        if let u = m?.url {
+            if let o = m?.name {
+                return Meme(name: o, url: u)
+            }
+        }
         return Meme(name: "test", url: "https://cdn.radiofrance.fr/s3/cruiser-production/2019/10/22f8d83b-2dbb-4156-8f6d-9cc13b94e16f/838_rickmorty.webp")
+        
     }
     
     func setImage(from url: String) {
