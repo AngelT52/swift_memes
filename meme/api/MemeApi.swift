@@ -1,7 +1,3 @@
-//
-//  BeerApi.swift
-//  ApiPractice
-
 import Alamofire
 import SwiftyJSON
 import PromiseKit

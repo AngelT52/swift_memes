@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  meme
-//
-//  Created by Alan Paul on 01/03/2022.
-//
-
 import UIKit
 
 @main

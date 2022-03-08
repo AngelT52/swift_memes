@@ -1,10 +1,3 @@
-//
-//  memeUITestsLaunchTests.swift
-//  memeUITests
-//
-//  Created by Alan Paul on 01/03/2022.
-//
-
 import XCTest
 
 class memeUITestsLaunchTests: XCTestCase {

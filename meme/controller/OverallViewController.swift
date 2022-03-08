@@ -1,10 +1,3 @@
-//
-//  CardsViewController.swift
-//  ClashRoyaleDex
-//
-//  Created by Petru Oltean on 05/03/2022.
-//
-
 import UIKit
 import Alamofire
 import SwiftyJSON

@@ -1,10 +1,3 @@
-//
-//  memeTests.swift
-//  memeTests
-//
-//  Created by Alan Paul on 01/03/2022.
-//
-
 import XCTest
 @testable import meme
 

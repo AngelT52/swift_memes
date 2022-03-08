@@ -1,10 +1,3 @@
-//
-//  Meme.swift
-//  meme
-//
-//  Created by Alan Paul on 01/03/2022.
-//
-
 class Meme{
     let name: String
     let url: String
