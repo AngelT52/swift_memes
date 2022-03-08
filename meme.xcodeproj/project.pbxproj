@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		020E6CB927D747AC00DFF5F2 /* another-one-meme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020E6CB827D747AC00DFF5F2 /* another-one-meme.mp3 */; };
+		020E6CBC27D795DB00DFF5F2 /* OverallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 020E6CBB27D795DB00DFF5F2 /* OverallViewController.swift */; };
 		028AF2B327CE07C50083CE85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028AF2B227CE07C50083CE85 /* AppDelegate.swift */; };
 		028AF2B527CE07C50083CE85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028AF2B427CE07C50083CE85 /* SceneDelegate.swift */; };
 		028AF2B727CE07C50083CE85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028AF2B627CE07C50083CE85 /* ViewController.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		020E6CB827D747AC00DFF5F2 /* another-one-meme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "another-one-meme.mp3"; path = "../../../Documents/another-one-meme.mp3"; sourceTree = "<group>"; };
+		020E6CBB27D795DB00DFF5F2 /* OverallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverallViewController.swift; sourceTree = "<group>"; };
 		028AF2AF27CE07C50083CE85 /* meme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028AF2B227CE07C50083CE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		028AF2B427CE07C50083CE85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				028AF2EA27CE12EF0083CE85 /* MemeViewController.swift */,
 				028AF2EC27CE2E040083CE85 /* MemeDescriptionViewController.swift */,
 				028AF2EF27CE809D0083CE85 /* randomMemeViewController.swift */,
+				020E6CBB27D795DB00DFF5F2 /* OverallViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -462,6 +465,7 @@
 				028AF2E727CE09750083CE85 /* Meme.swift in Sources */,
 				028AF2B327CE07C50083CE85 /* AppDelegate.swift in Sources */,
 				028AF2EB27CE12EF0083CE85 /* MemeViewController.swift in Sources */,
+				020E6CBC27D795DB00DFF5F2 /* OverallViewController.swift in Sources */,
 				028AF2F027CE809D0083CE85 /* randomMemeViewController.swift in Sources */,
 				028AF2B527CE07C50083CE85 /* SceneDelegate.swift in Sources */,
 				028AF2ED27CE2E040083CE85 /* MemeDescriptionViewController.swift in Sources */,
