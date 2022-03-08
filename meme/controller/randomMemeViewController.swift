@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
-
+import AVFoundation
 
 class randomMemeViewController: UIViewController {
     
@@ -35,9 +35,24 @@ class randomMemeViewController: UIViewController {
         // ---------------------------
     }
     
+    let pianoSound = URL(fileURLWithPath: Bundle.main.path(forResource: "another-one-meme", ofType: "mp3")!)
+    var audioPlayer = AVAudioPlayer()
+
+       
+    
     //MARK: IBActions
     @IBAction func randomize(_ sender: Any) {
+        do {
+        audioPlayer = try AVAudioPlayer(contentsOf: pianoSound)
+        audioPlayer.play()
         self.randomize()
+        } catch {
+            
+        }
+    }
+    
+    @IBAction func back(_ sender: Any){
+        self.dismiss(animated: true, completion: nil)
     }
     
     //MARK: Functions
@@ -56,7 +71,6 @@ class randomMemeViewController: UIViewController {
             
     }
     
-    
     func getRandomMeme() -> Meme {
         let m = memes.randomElement()
         if let u = m?.url {
@@ -64,7 +78,7 @@ class randomMemeViewController: UIViewController {
                 return Meme(name: o, url: u)
             }
         }
-        return Meme(name: "test", url: "https://cdn.radiofrance.fr/s3/cruiser-production/2019/10/22f8d83b-2dbb-4156-8f6d-9cc13b94e16f/838_rickmorty.webp")
+        return Meme(name: "non", url: "https://cdn.radiofrance.fr/s3/cruiser-production/2019/10/22f8d83b-2dbb-4156-8f6d-9cc13b94e16f/838_rickmorty.webp")
         
     }
     

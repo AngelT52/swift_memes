@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		020E6CB927D747AC00DFF5F2 /* another-one-meme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 020E6CB827D747AC00DFF5F2 /* another-one-meme.mp3 */; };
 		028AF2B327CE07C50083CE85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028AF2B227CE07C50083CE85 /* AppDelegate.swift */; };
 		028AF2B527CE07C50083CE85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028AF2B427CE07C50083CE85 /* SceneDelegate.swift */; };
 		028AF2B727CE07C50083CE85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028AF2B627CE07C50083CE85 /* ViewController.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		020E6CB827D747AC00DFF5F2 /* another-one-meme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "another-one-meme.mp3"; path = "../../../Documents/another-one-meme.mp3"; sourceTree = "<group>"; };
 		028AF2AF27CE07C50083CE85 /* meme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = meme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		028AF2B227CE07C50083CE85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		028AF2B427CE07C50083CE85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				028AF2E327CE09160083CE85 /* controller */,
 				028AF2E227CE090B0083CE85 /* api */,
 				028AF2B227CE07C50083CE85 /* AppDelegate.swift */,
+				020E6CB827D747AC00DFF5F2 /* another-one-meme.mp3 */,
 				028AF2B427CE07C50083CE85 /* SceneDelegate.swift */,
 				028AF2B627CE07C50083CE85 /* ViewController.swift */,
 				028AF2BB27CE07C60083CE85 /* Assets.xcassets */,
@@ -326,6 +329,7 @@
 				028AF2BF27CE07C60083CE85 /* LaunchScreen.storyboard in Resources */,
 				028AF2BC27CE07C60083CE85 /* Assets.xcassets in Resources */,
 				028AF2BA27CE07C50083CE85 /* Main.storyboard in Resources */,
+				020E6CB927D747AC00DFF5F2 /* another-one-meme.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
