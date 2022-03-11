@@ -20,13 +20,37 @@ class MemeApi {
                 print("api", memesJSON)
                 for meme in memesJSON {
                     memes.append(Meme(name: meme["name"].stringValue,
-                                           url: meme["url"].stringValue
-                    ))
+                                      url: meme["url"].stringValue,
+                                      id: meme["id"].stringValue,
+                                      boxCount: meme["box_count"].stringValue
+                                     )
+                                )
                 }
                 print("memes")
                 seal.fulfill(memes)
             }
         }
     }
+    
+    static func modifyMeme(id: String, textTop: String, textBot: String) -> Promise<[Meme]> {
+        
+        let parameters: [String: Any] = [
+            "username" : "Ouais",
+            "password" : "Ouais123456",
+            "template_id" : id,
+            "text0" : textTop,
+            "text1" : textBot,
+            ]
+        // Gestion de l'asynchrone, on retourne une promesse
+        return Promise { seal in
+            
+            // On fait l'appel dans la promesse
+            AF.request("https://api.imgflip.com/caption_image",method: .post, parameters: parameters).response { response in
+                let url = JSON(response.data)
+                print(url)
+            }
+        }
+    }
+    
 }
 

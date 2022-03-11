@@ -55,6 +55,10 @@ class randomMemeViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func modify(_ sender: Any){
+        performSegue(withIdentifier: "memeModifyViewSegue", sender: self.meme)
+    }
+    
     //MARK: Functions
     
     func randomize() {
@@ -75,10 +79,15 @@ class randomMemeViewController: UIViewController {
         let m = memes.randomElement()
         if let u = m?.url {
             if let o = m?.name {
-                return Meme(name: o, url: u)
+                if let t = m?.id{
+                    if let n = m?.boxCount{
+                        return Meme(name: o, url: u, id: t, boxCount: n)
+                    }
+                    
+                }
             }
         }
-        return Meme(name: "non", url: "https://cdn.radiofrance.fr/s3/cruiser-production/2019/10/22f8d83b-2dbb-4156-8f6d-9cc13b94e16f/838_rickmorty.webp")
+        return Meme(name: "non", url: "https://cdn.radiofrance.fr/s3/cruiser-production/2019/10/22f8d83b-2dbb-4156-8f6d-9cc13b94e16f/838_rickmorty.webp", id: "181913649", boxCount: "2")
         
     }
     
@@ -94,6 +103,17 @@ class randomMemeViewController: UIViewController {
             DispatchQueue.main.async {
                 self.pictureImageView?.image = image
                 print("tocar", image)
+            }
+        }
+    }
+    
+    //MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "memeModifyViewSegue" {
+            
+            if let vc = segue.destination as? MemeModifierViewController {
+                vc.meme = sender as? Meme
             }
         }
     }

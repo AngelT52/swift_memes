@@ -74,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-149.27536231884059" y="126.5625"/>
+            <point key="canvasLocation" x="-728" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rpx-B9-Y86">
@@ -91,7 +91,7 @@
                     </connections>
                 </navigationController>
             </objects>
-            <point key="canvasLocation" x="766" y="162"/>
+            <point key="canvasLocation" x="768" y="127"/>
         </scene>
         <!--Overall View Controller-->
         <scene sceneID="ed0-ua-hET">
@@ -143,7 +143,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRu-4G-wOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1644.9275362318842" y="159.375"/>
+            <point key="canvasLocation" x="1623" y="127"/>
         </scene>
         <!--Random Meme View Controller-->
         <scene sceneID="Y78-Gc-j4a">
@@ -187,7 +187,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Modifier"/>
                                 <connections>
-                                    <segue destination="LAg-8w-hRa" kind="show" id="lyI-bx-FME"/>
+                                    <action selector="modify:" destination="l4H-g5-9pA" eventType="touchUpInside" id="gg8-hQ-0Ye"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWe-Ai-4Gw">
@@ -212,14 +212,11 @@
                             <constraint firstItem="kjX-jX-Ir9" firstAttribute="top" secondItem="F95-w4-oSi" secondAttribute="bottom" constant="34" id="MlL-OU-xu8"/>
                             <constraint firstItem="yhA-yA-P4x" firstAttribute="top" secondItem="kjX-jX-Ir9" secondAttribute="bottom" constant="23" id="NBU-5v-EgM"/>
                             <constraint firstItem="rMZ-eu-dBc" firstAttribute="trailing" secondItem="kjX-jX-Ir9" secondAttribute="trailing" constant="127" id="P0v-Wp-gBy"/>
-                            <constraint firstItem="yhA-yA-P4x" firstAttribute="leading" secondItem="rMZ-eu-dBc" secondAttribute="leading" constant="151" id="QQn-hN-dHI"/>
                             <constraint firstItem="FEq-px-ncG" firstAttribute="leading" secondItem="rMZ-eu-dBc" secondAttribute="leading" constant="30" id="WPz-W3-xq6"/>
                             <constraint firstItem="FEq-px-ncG" firstAttribute="top" secondItem="SWe-Ai-4Gw" secondAttribute="bottom" constant="19" id="YF1-ft-ZvE"/>
                             <constraint firstItem="rMZ-eu-dBc" firstAttribute="trailing" secondItem="kjX-jX-Ir9" secondAttribute="trailing" constant="107" id="d6q-Oo-DB0"/>
-                            <constraint firstItem="rMZ-eu-dBc" firstAttribute="bottom" secondItem="yhA-yA-P4x" secondAttribute="bottom" constant="29" id="e6Z-Sz-2bc"/>
                             <constraint firstItem="rMZ-eu-dBc" firstAttribute="trailing" secondItem="yhA-yA-P4x" secondAttribute="trailing" constant="150" id="eRE-WI-eL1"/>
                             <constraint firstItem="rMZ-eu-dBc" firstAttribute="bottom" secondItem="yhA-yA-P4x" secondAttribute="bottom" constant="29" id="i4G-Bn-ps4"/>
-                            <constraint firstItem="rMZ-eu-dBc" firstAttribute="trailing" secondItem="yhA-yA-P4x" secondAttribute="trailing" constant="150" id="tRH-1E-Rr1"/>
                             <constraint firstItem="yhA-yA-P4x" firstAttribute="leading" secondItem="rMZ-eu-dBc" secondAttribute="leading" constant="151" id="ysS-rl-km4"/>
                             <constraint firstItem="SWe-Ai-4Gw" firstAttribute="top" secondItem="rMZ-eu-dBc" secondAttribute="top" id="yz7-wA-h4m"/>
                         </constraints>
@@ -232,27 +229,51 @@
                     <connections>
                         <outlet property="pictureImageView" destination="FEq-px-ncG" id="kWp-Ke-TJx"/>
                         <outlet property="titleLabel" destination="F95-w4-oSi" id="MLw-UZ-L9H"/>
+                        <segue destination="LAg-8w-hRa" kind="show" identifier="memeModifyViewSegue" id="JpT-0l-6mw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxP-qw-lzZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-248" y="884"/>
+            <point key="canvasLocation" x="767" y="884"/>
         </scene>
-        <!--View Controller-->
+        <!--Meme Modifier View Controller-->
         <scene sceneID="AQD-0y-rxy">
             <objects>
-                <viewController id="LAg-8w-hRa" sceneMemberID="viewController">
+                <viewController id="LAg-8w-hRa" customClass="MemeModifierViewController" customModule="meme" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Y9M-nd-mNb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzO-e6-Cpn">
+                                <rect key="frame" x="20" y="23" width="374" height="388"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzh-t6-puZ">
+                                <rect key="frame" x="142" y="767" width="131" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Terminer"/>
+                                <connections>
+                                    <action selector="modify:" destination="LAg-8w-hRa" eventType="touchUpInside" id="aQX-Cp-KhK"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="a4i-1H-adw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yzh-t6-puZ" firstAttribute="leading" secondItem="a4i-1H-adw" secondAttribute="leading" constant="142" id="0Gb-BG-7GP"/>
+                            <constraint firstItem="zzO-e6-Cpn" firstAttribute="top" secondItem="Y9M-nd-mNb" secondAttribute="top" constant="23" id="6wn-zh-Xia"/>
+                            <constraint firstItem="a4i-1H-adw" firstAttribute="trailing" secondItem="yzh-t6-puZ" secondAttribute="trailing" constant="141" id="N0G-UA-3Zc"/>
+                            <constraint firstItem="a4i-1H-adw" firstAttribute="bottom" secondItem="yzh-t6-puZ" secondAttribute="bottom" constant="44" id="T5A-07-ZBG"/>
+                            <constraint firstItem="zzO-e6-Cpn" firstAttribute="leading" secondItem="a4i-1H-adw" secondAttribute="leading" constant="20" id="ly2-Bx-4eI"/>
+                            <constraint firstItem="a4i-1H-adw" firstAttribute="trailing" secondItem="zzO-e6-Cpn" secondAttribute="trailing" constant="20" id="yZe-R3-QNr"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="6Ok-iL-Boe"/>
+                    <connections>
+                        <outlet property="pictureImageView" destination="zzO-e6-Cpn" id="770-Rs-fS7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e7e-Wm-g8l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="496" y="884"/>
+            <point key="canvasLocation" x="1622" y="884"/>
         </scene>
         <!--Memes List-->
         <scene sceneID="SqM-mB-mn5">
@@ -284,7 +305,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtj-ij-x1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472" y="-530"/>
+            <point key="canvasLocation" x="1622" y="-644"/>
         </scene>
         <!--Title-->
         <scene sceneID="2hc-6O-CVd">
@@ -301,23 +322,35 @@
                                     <constraint firstAttribute="height" constant="500" id="mV9-3l-42A"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UdP-M9-sAy">
+                                <rect key="frame" x="143" y="735" width="129" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Modifier"/>
+                                <connections>
+                                    <action selector="modify:" destination="GUM-cT-skz" eventType="touchUpInside" id="lqU-A2-IlT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0jE-bj-Cxo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="0jE-bj-Cxo" firstAttribute="trailing" secondItem="wX8-Bp-XIs" secondAttribute="trailing" constant="16" id="85r-Yn-sXM"/>
+                            <constraint firstItem="0jE-bj-Cxo" firstAttribute="trailing" secondItem="UdP-M9-sAy" secondAttribute="trailing" constant="142" id="Dod-MW-Iw2"/>
+                            <constraint firstItem="UdP-M9-sAy" firstAttribute="leading" secondItem="0jE-bj-Cxo" secondAttribute="leading" constant="143" id="a2q-Ud-eBx"/>
                             <constraint firstItem="wX8-Bp-XIs" firstAttribute="leading" secondItem="0jE-bj-Cxo" secondAttribute="leading" constant="16" id="buO-tQ-8bK"/>
+                            <constraint firstItem="0jE-bj-Cxo" firstAttribute="bottom" secondItem="UdP-M9-sAy" secondAttribute="bottom" constant="76" id="c16-Jl-LW6"/>
                             <constraint firstItem="wX8-Bp-XIs" firstAttribute="top" secondItem="0jE-bj-Cxo" secondAttribute="top" constant="50" id="kbY-Rn-oao"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="5kZ-eC-JSZ"/>
                     <connections>
                         <outlet property="pictureImageView" destination="wX8-Bp-XIs" id="NiX-F9-i69"/>
+                        <segue destination="LAg-8w-hRa" kind="show" identifier="memeModifyViewSegue" id="q8Q-sW-shd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXr-YX-DQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2358" y="-548"/>
+            <point key="canvasLocation" x="2994" y="127"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ROf-jt-ZFH">
@@ -334,11 +367,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sRr-3Y-hlQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="-530"/>
+            <point key="canvasLocation" x="767" y="-644"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uAu-ho-L1j"/>
+        <segue reference="T8J-Na-ixj"/>
+        <segue reference="q8Q-sW-shd"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

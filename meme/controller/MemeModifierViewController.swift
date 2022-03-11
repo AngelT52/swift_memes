@@ -1,12 +1,15 @@
 import UIKit
 import WebKit
 
-class MemeDescriptionViewController: UIViewController {
+class MemeModifierViewController: UIViewController {
     
     
     @IBOutlet weak var pictureImageView: UIImageView?
+    @IBOutlet weak var topTextInput: UITextField?
+    @IBOutlet weak var bottomTextInput: UITextField?
     
     var meme: Meme? = nil
+    var link: String?
     
     override func viewDidLoad() {
 
@@ -23,7 +26,15 @@ class MemeDescriptionViewController: UIViewController {
     }
     
     @IBAction func modify(_ sender: Any){
-        performSegue(withIdentifier: "memeModifyViewSegue", sender: self.meme)
+        if let memeId = meme?.id{
+            MemeApi.modifyMeme(id: memeId+"", textTop: "pouler", textBot: "poulet").done { res in
+                
+            }
+        } else {
+            MemeApi.modifyMeme(id: "181913649", textTop: "pouler", textBot: "poulet").done { res in
+                
+            }
+        }
     }
     
     func setImage(from url: String) {
@@ -38,18 +49,6 @@ class MemeDescriptionViewController: UIViewController {
             DispatchQueue.main.async {
                 self.pictureImageView?.image = image
                 print("tocar", image)
-            }
-        }
-    }
-    
-    //MARK: - Segue
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "memeModifyViewSegue" {
-            
-            if let vc = segue.destination as? MemeModifierViewController {
-                vc.meme = sender as? Meme
-                print("puedes")
             }
         }
     }
