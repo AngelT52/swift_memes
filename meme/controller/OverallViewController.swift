@@ -8,6 +8,7 @@ class OverallViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         refreshCardsList()
+        
     }
     
     func refreshCardsList() {
@@ -32,6 +33,21 @@ class OverallViewController: UICollectionViewController {
         loadImage(url: memes[indexPath.row].url, image: cellView.cellImage, loader: cellView.loaderSpin)
         
         return cellView
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "overallSegue", sender: memes[indexPath.row])
+    }
+    
+    //MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "overallSegue" {
+            
+            if let vc = segue.destination as? MemeDescriptionViewController {
+                vc.meme = sender as? Meme
+            }
+        }
     }
     
     func loadImage(url: String, image: UIImageView, loader: UIActivityIndicatorView){

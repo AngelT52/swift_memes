@@ -45,27 +45,27 @@
                                     <segue destination="l4H-g5-9pA" kind="show" id="YiM-dM-Kvq"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pFt-jQ-cCo">
-                                <rect key="frame" x="164" y="502" width="103" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BD-Eu-uXL">
+                                <rect key="frame" x="141" y="507" width="151" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Overall view"/>
                                 <connections>
-                                    <segue destination="qJt-2N-3w1" kind="show" id="hwx-5Q-wGw"/>
+                                    <segue destination="qJt-2N-3w1" kind="show" id="wKY-cd-NWx"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pFt-jQ-cCo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="1Hb-OY-u7Q"/>
-                            <constraint firstItem="NW6-JA-jXF" firstAttribute="top" secondItem="pFt-jQ-cCo" secondAttribute="bottom" constant="22" id="4DG-Zb-rVM"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pFt-jQ-cCo" secondAttribute="trailing" constant="147" id="4ZQ-wX-P7k"/>
                             <constraint firstItem="GYl-7A-CRX" firstAttribute="top" secondItem="NW6-JA-jXF" secondAttribute="bottom" constant="27" id="75C-lL-uyH"/>
                             <constraint firstItem="xCz-m2-K4t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="8Ow-9s-Hiz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1BD-Eu-uXL" secondAttribute="trailing" constant="122" id="90q-Is-bhe"/>
                             <constraint firstItem="NW6-JA-jXF" firstAttribute="top" secondItem="xCz-m2-K4t" secondAttribute="bottom" constant="396" id="BY2-9p-Grb"/>
                             <constraint firstItem="xCz-m2-K4t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="94" id="OPE-4U-SaS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GYl-7A-CRX" secondAttribute="trailing" constant="83" id="PaZ-eQ-lw9"/>
+                            <constraint firstItem="NW6-JA-jXF" firstAttribute="top" secondItem="1BD-Eu-uXL" secondAttribute="bottom" constant="17" id="SjA-HG-ykK"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NW6-JA-jXF" secondAttribute="trailing" constant="83" id="Tx3-9Y-GUh"/>
+                            <constraint firstItem="1BD-Eu-uXL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="boa-2W-uGQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xCz-m2-K4t" secondAttribute="trailing" constant="141" id="fVj-4w-bHi"/>
                             <constraint firstItem="GYl-7A-CRX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="92" id="hix-N8-2Gi"/>
                             <constraint firstItem="NW6-JA-jXF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="100" id="uOC-fv-e3g"/>
@@ -79,17 +79,17 @@
         <!--Navigation Controller-->
         <scene sceneID="rpx-B9-Y86">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="qJt-2N-3w1" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="9kw-HY-D5R"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8zP-6z-cJ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="qJt-2N-3w1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="fBk-gp-PbL"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PF2-6J-ySM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
                         <segue destination="beu-Gr-gru" kind="relationship" relationship="rootViewController" id="v53-tR-d6Q"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8zP-6z-cJ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="766" y="162"/>
         </scene>
@@ -119,7 +119,7 @@
                                             <rect key="frame" x="27" y="34" width="74" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </activityIndicatorView>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vye-De-Mce">
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vye-De-Mce">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -136,7 +136,10 @@
                             <outlet property="delegate" destination="beu-Gr-gru" id="5qJ-Yw-dQC"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="olJ-bh-Itu"/>
+                    <navigationItem key="navigationItem" id="2Sx-aY-47E"/>
+                    <connections>
+                        <segue destination="GUM-cT-skz" kind="show" identifier="overallSegue" id="uAu-ho-L1j"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DRu-4G-wOs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -314,15 +317,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXr-YX-DQB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233" y="-530"/>
+            <point key="canvasLocation" x="2358" y="-548"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ROf-jt-ZFH">
             <objects>
-                <navigationController modalPresentationStyle="fullScreen" id="PUP-Xv-iix" sceneMemberID="viewController">
+                <navigationController id="PUP-Xv-iix" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="ChJ-tz-Hiw"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HAE-Lx-hK3">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -334,6 +337,9 @@
             <point key="canvasLocation" x="736" y="-530"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="uAu-ho-L1j"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
