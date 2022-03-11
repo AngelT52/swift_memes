@@ -1,5 +1,6 @@
 import UIKit
 import WebKit
+import Photos
 
 class MemeModifierViewController: UIViewController {
     
@@ -26,16 +27,32 @@ class MemeModifierViewController: UIViewController {
     }
     
     @IBAction func modify(_ sender: Any){
-        if let memeId = meme?.id{
-            MemeApi.modifyMeme(id: memeId+"", textTop: "pouler", textBot: "poulet").done { res in
-                
-            }
-        } else {
-            MemeApi.modifyMeme(id: "181913649", textTop: "pouler", textBot: "poulet").done { res in
-                
+        if let textTop : String = topTextInput?.text{
+            if let textBot : String = bottomTextInput?.text{
+                if let memeId = meme?.id{
+                    MemeApi.modifyMeme(id: memeId, textTop: textTop, textBot: textBot).done { res in
+                        self.setImage(from: res)
+                        /*if let image = self.pictureImageView?.image{
+                            PHPhotoLibrary.requestAuthorization { (status) in
+                               // No crash
+                            
+                                UIImageWriteToSavedPhotosAlbum(image, self, #selector(self.saveCompleted), nil)
+                            }
+                        }*/
+                        
+                    }
+                } else {
+                    MemeApi.modifyMeme(id: "181913649", textTop: "erreur", textBot: "erreur").done { res in
+                        self.setImage(from: res)
+                    }
+                }
             }
         }
     }
+    
+    @objc func saveCompleted(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+            print("Save finished!")
+        }
     
     func setImage(from url: String) {
         guard let imageURL = URL(string: url) else { return }

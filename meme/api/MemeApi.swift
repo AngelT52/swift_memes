@@ -7,6 +7,7 @@ class MemeApi {
     //Fonction static pour ne pas a avoir a l'instancier a chaque fois qu'on veux la call
     static func getMemes() -> Promise<[Meme]> {
         var memes: [Meme] = []
+        var data: Test
         
         // Gestion de l'asynchrone, on retourne une promesse
         return Promise { seal in
@@ -32,7 +33,7 @@ class MemeApi {
         }
     }
     
-    static func modifyMeme(id: String, textTop: String, textBot: String) -> Promise<[Meme]> {
+    static func modifyMeme(id: String, textTop: String, textBot: String) -> Promise<String> {
         
         let parameters: [String: Any] = [
             "username" : "Ouais",
@@ -47,7 +48,8 @@ class MemeApi {
             // On fait l'appel dans la promesse
             AF.request("https://api.imgflip.com/caption_image",method: .post, parameters: parameters).response { response in
                 let url = JSON(response.data)
-                print(url)
+                let dataJSON = url["data"]["url"].stringValue
+                seal.fulfill(dataJSON)
             }
         }
     }

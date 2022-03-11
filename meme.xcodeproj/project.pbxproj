@@ -24,6 +24,7 @@
 		028AF2ED27CE2E040083CE85 /* MemeDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028AF2EC27CE2E040083CE85 /* MemeDescriptionViewController.swift */; };
 		028AF2F027CE809D0083CE85 /* randomMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 028AF2EF27CE809D0083CE85 /* randomMemeViewController.swift */; };
 		02B7CE1B27DB5EAB0049EBCF /* MemeModifierViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B7CE1A27DB5EAB0049EBCF /* MemeModifierViewController.swift */; };
+		02B7CE1F27DBA73A0049EBCF /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B7CE1E27DBA73A0049EBCF /* Test.swift */; };
 		1BBD5E9DFF100EC0558FAC5D /* Pods_meme.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC4709C91CD6CFE8B4717080 /* Pods_meme.framework */; };
 		2ACD4945BA2D1BE932A31FD4 /* Pods_meme_memeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48E3DABBF0B4900775AD19D5 /* Pods_meme_memeUITests.framework */; };
 		AA8FDDE67C61C5191E6C172F /* Pods_memeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A168EADA9C10C549BDAFD99F /* Pods_memeTests.framework */; };
@@ -68,6 +69,7 @@
 		028AF2EC27CE2E040083CE85 /* MemeDescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeDescriptionViewController.swift; sourceTree = "<group>"; };
 		028AF2EF27CE809D0083CE85 /* randomMemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = randomMemeViewController.swift; sourceTree = "<group>"; };
 		02B7CE1A27DB5EAB0049EBCF /* MemeModifierViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeModifierViewController.swift; sourceTree = "<group>"; };
+		02B7CE1E27DBA73A0049EBCF /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		1C61BBF79A400B442E463BD7 /* Pods-memeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-memeTests.debug.xcconfig"; path = "Target Support Files/Pods-memeTests/Pods-memeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		29CF791CA793DED74BA07DCA /* Pods-meme-memeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-meme-memeUITests.debug.xcconfig"; path = "Target Support Files/Pods-meme-memeUITests/Pods-meme-memeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		48E3DABBF0B4900775AD19D5 /* Pods_meme_memeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_meme_memeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				028AF2E627CE09750083CE85 /* Meme.swift */,
+				02B7CE1E27DBA73A0049EBCF /* Test.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				02B7CE1B27DB5EAB0049EBCF /* MemeModifierViewController.swift in Sources */,
 				028AF2E727CE09750083CE85 /* Meme.swift in Sources */,
 				028AF2B327CE07C50083CE85 /* AppDelegate.swift in Sources */,
+				02B7CE1F27DBA73A0049EBCF /* Test.swift in Sources */,
 				028AF2EB27CE12EF0083CE85 /* MemeViewController.swift in Sources */,
 				020E6CBC27D795DB00DFF5F2 /* OverallViewController.swift in Sources */,
 				028AF2F027CE809D0083CE85 /* randomMemeViewController.swift in Sources */,
